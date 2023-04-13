@@ -1,0 +1,3 @@
+class Drink implements banapple {
+    
+}
