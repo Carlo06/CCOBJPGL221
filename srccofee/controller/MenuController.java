@@ -1,0 +1,248 @@
+package controller;
+
+import stocks.*;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javax.lang.model.util.ElementScanner14;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import alert.PopupMessage;
+
+
+public class MenuController implements Initializable {
+
+
+    @FXML
+    Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, 
+    button13, button14, button15, button16, button17, button18, button19, button20, button21, button22, button23, button24, cartbutton;
+
+    @FXML
+    private AnchorPane scenepane;
+
+    @FXML
+    private Stage stage;
+
+    @FXML
+    private Scene scene;
+
+    @FXML
+    static Parent homeRoot = null;
+
+    @FXML
+    static CheckoutController checkoutController = null;
+
+
+    FXMLLoader loader;
+
+
+    static Espresso esp = new Espresso();
+    static Cappucino capp = new Cappucino();
+    static Americano amar = new Americano();
+    static HotChocolate hot= new HotChocolate();
+    static Latte latt = new Latte();
+    static ChocolateFrappe choc= new ChocolateFrappe();
+    static VanilaOreo vani = new VanilaOreo();
+    static MilkShake milk = new MilkShake();
+    static Croissant croi = new Croissant();
+    static CarrotCake carr = new CarrotCake();
+    static StrawberryChesscake straw = new StrawberryChesscake();
+    static Cookies coo = new Cookies();
+
+    static Cart cart = new Cart();
+
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+
+        try {
+            loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
+            homeRoot = loader.load();
+        } catch (Exception e) {
+            // 
+        }
+
+        // Clears all items in Checkout.fxml
+      
+    }
+   //------------------------ ORDER ADD TO CART -----------------------//
+    /**
+     * @param event
+     * @throws IOException
+     */
+    public void buy(ActionEvent event) throws IOException {
+
+        PopupMessage.showSimpleAlert("View your order", "Item added!");
+
+        Button sourceButton = (Button) event.getSource();
+
+        // If addtocart button is pressed, set product status to true
+     
+
+        if (sourceButton.equals(button1)) {
+            MenuController.amar.setProductStatus(true);
+            MenuController.amar.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane1);
+        }
+
+        else if (sourceButton == button2) {
+            MenuController.capp.setProductStatus(true);
+            MenuController.capp.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane2);
+        }
+
+        else if (sourceButton == button3) {
+            MenuController.carr.setProductStatus(true);
+            MenuController.carr.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane3);
+        }
+
+        else if (sourceButton == button4) {
+            MenuController.choc.setProductStatus(true);
+            MenuController.choc.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane4);
+        }
+
+        else if (sourceButton == button5) {
+            MenuController.coo.setProductStatus(true);
+            MenuController.coo.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane5);
+        }
+
+        else if (sourceButton == button6) {
+            MenuController.croi.setProductStatus(true);
+            MenuController.croi.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane6);
+        }
+
+        else if (sourceButton == button7) {
+            MenuController.esp.setProductStatus(true);
+            MenuController.esp.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane7);
+        }
+
+        else if (sourceButton == button8) {
+            MenuController.hot.setProductStatus(true);
+            MenuController.hot.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane8);
+        }
+
+        else if (sourceButton == button9) {
+            MenuController.latt.setProductStatus(true);
+            MenuController.latt.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane9);
+        }
+
+        else if (sourceButton == button10) {
+            MenuController.milk.setProductStatus(true);
+            MenuController.milk.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane10);
+        }
+
+        else if (sourceButton == button11) {
+            MenuController.straw.setProductStatus(true);
+            MenuController.straw.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane11);
+        }
+
+        else if (sourceButton == button12) {
+            MenuController.vani.setProductStatus(true);
+            MenuController.vani.setProductQuantity(1);
+            MenuController.cart.addItem(checkoutController.pane12);
+        }
+
+
+        MenuController.cart.showItems();
+    }
+
+        //-----------------Description-----------------------//
+    public void description(ActionEvent event) throws IOException {
+
+        Button sourceButton = (Button) event.getSource(); 
+
+        if (sourceButton.equals(button13)) {
+            esp.showDescriptionMessage(true);
+            PopupMessage.showDescriptionMessage("DESCRIPTION OF YOUR ORDER");
+        }
+
+        else if(sourceButton.equals(button14)) {
+            capp.showDescriptionMessage(true);    
+            PopupMessage.showDescriptionMessage2("DESCRIPTION OF YOUR ORDER");
+        }
+        
+        else if(sourceButton.equals(button15)) {
+            amar.showDescriptionMessage(true); 
+            PopupMessage.showDescriptionMessage3("DESCRIPTION OF YOUR ORDER");   
+        }
+
+        else if(sourceButton.equals(button16)) {
+            hot.showDescriptionMessage(true);    
+            PopupMessage.showDescriptionMessage4("DESCRIPTION OF YOUR ORDER");
+        }
+
+        else if(sourceButton.equals(button17)) {
+            latt.showDescriptionMessage(true);   
+            PopupMessage.showDescriptionMessage5("DESCRIPTION OF YOUR ORDER"); 
+        }
+
+        else if(sourceButton.equals(button18)) {
+            choc.showDescriptionMessage(true); 
+            PopupMessage.showDescriptionMessage6("DESCRIPTION OF YOUR ORDER");    
+        }
+        else if(sourceButton.equals(button19)) {
+            vani.showDescriptionMessage(true);
+            PopupMessage.showDescriptionMessage7("DESCRIPTION OF YOUR ORDER");    
+        }
+        else if(sourceButton.equals(button20)) {
+            milk.showDescriptionMessage(true); 
+            PopupMessage.showDescriptionMessage8("DESCRIPTION OF YOUR ORDER");   
+        }
+        else if(sourceButton.equals(button21)) {
+            croi.showDescriptionMessage(true); 
+            PopupMessage.showDescriptionMessage9("DESCRIPTION OF YOUR ORDER");   
+        }
+        else if(sourceButton.equals(button22)) {
+            carr.showDescriptionMessage(true);  
+            PopupMessage.showDescriptionMessage10("DESCRIPTION OF YOUR ORDER");  
+        }
+        else if(sourceButton.equals(button23)) {
+            straw.showDescriptionMessage(true);  
+            PopupMessage.showDescriptionMessage11("DESCRIPTION OF YOUR ORDER");  
+        }
+        else if(sourceButton.equals(button24)) {
+            coo.showDescriptionMessage(true); 
+            PopupMessage.showDescriptionMessage12("DESCRIPTION OF YOUR ORDER");  
+        }
+    }
+
+    
+
+    // Goes to Checkout.fxml
+
+    public void gotocheckout(ActionEvent event) throws IOException {
+
+        // Load items to cart before switching to checkout page
+        checkoutController.showItems(cart.getItemList());
+
+        // Set initial total amount in checkout page
+        MenuController.checkoutController.getInitialAmount();
+
+        Scene scene = new Scene(homeRoot);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+}
