@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="774.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlantController">
+   <content>
+      <AnchorPane fx:id="scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1410.0" prefWidth="1296.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutY="-1.0" prefHeight="170.0" prefWidth="1270.0" style="-fx-background-color: #474554;">
+               <children>
+                  <Button fx:id="homebutton" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" onAction="#gotohome" prefHeight="165.0" prefWidth="190.0" style="-fx-background-color: #474554;" text="Home" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logoutbutton" layoutX="930.0" layoutY="1.0" mnemonicParsing="false" onAction="#logout" prefHeight="168.0" prefWidth="171.0" style="-fx-background-color: #474554;" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cartbutton" layoutX="1090.0" mnemonicParsing="false" onAction="#gotocart" prefHeight="167.0" prefWidth="166.0" style="-fx-background-color: #474554;" text="My Cart" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="579.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEN">
+                     <font>
+                        <Font name="Times New Roman Bold" size="48.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="78.0" layoutY="207.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img1" fitHeight="359.0" fitWidth="336.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Graphic%20baseball%20shirt.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name1" layoutX="14.0" layoutY="258.0" text="Baseball Shirt" textFill="#474554">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price1" layoutX="14.0" layoutY="290.0" text="499.00" textFill="#474554">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button1" layoutX="215.0" layoutY="302.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: green;" text="Add to Cart" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" top="50.0" />
+               </padding>
+            </Pane>
+            <Pane layoutX="78.0" layoutY="595.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img2" fitHeight="359.0" fitWidth="336.0" layoutX="8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Bottom%20front%20shirt.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name2" layoutX="25.0" layoutY="271.0" text="Bottom Shirt" textFill="#474554">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price2" layoutX="25.0" layoutY="301.0" text="799.00" textFill="#474554">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button2" layoutX="214.0" layoutY="299.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: green;" text="Add to Cart" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" top="50.0" />
+               </padding>
+            </Pane>
+            <Pane layoutX="78.0" layoutY="982.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img3" fitHeight="359.0" fitWidth="336.0" layoutX="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Mushroom%20drawstring%20hoodie.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name3" layoutX="95.0" layoutY="233.0" text="Drawstring Hoodie" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price3" layoutX="137.0" layoutY="267.0" text="1,500.00" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button3" layoutX="122.0" layoutY="304.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: green;" text="Add to Cart" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" top="50.0" />
+               </padding>
+            </Pane>
+            <Pane layoutX="802.0" layoutY="207.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img4" fitHeight="359.0" fitWidth="336.0" layoutX="47.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Flap%20pocket%20shirt%20and%20pants.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name4" layoutX="76.0" layoutY="235.0" text="Flap Pocket Shirt Pants" textFill="#f2e9e9">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price4" layoutX="143.0" layoutY="266.0" text="1,999.00" textFill="#ece2e2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button4" layoutX="131.0" layoutY="301.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: green;" text="Add to Cart" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+            </Pane>
+            <Pane layoutX="834.0" layoutY="595.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img5" fitHeight="329.0" fitWidth="326.0" layoutX="5.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Skull%20floral%20print%20wide%20leg%20jeans.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name5" layoutX="22.0" layoutY="264.0" text="Floral Jeans" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price5" layoutX="22.0" layoutY="294.0" text="1,300.00" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button5" layoutX="226.0" layoutY="293.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: green;" text="Add to Cart" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+            </Pane>
+            <Pane layoutX="825.0" layoutY="982.0" prefHeight="352.0" prefWidth="336.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="img6" fitHeight="354.0" fitWidth="267.0" layoutX="34.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Half%20zip%20drops%20shoulder%20sweater.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name6" layoutX="94.0" layoutY="237.0" text="Shoulder Sweater" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price6" layoutX="135.0" layoutY="274.0" text="1,300.00" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button6" layoutX="131.0" layoutY="304.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: green;" text="Add to Cart" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
