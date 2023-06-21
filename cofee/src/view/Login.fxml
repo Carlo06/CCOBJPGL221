@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <ImageView fitHeight="417.0" fitWidth="616.0" layoutX="-9.0" layoutY="-8.0">
+         <image>
+            <Image url="@../image/Log%20In%20Background.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="143.0" layoutY="216.0" prefHeight="26.0" prefWidth="111.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="255.0" prefHeight="26.0" prefWidth="111.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="mybutton" layoutX="231.0" layoutY="316.0" mnemonicParsing="false" onAction="#login" opacity="0.74" prefHeight="42.0" prefWidth="139.0" style="-fx-background-color: black;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <TextField fx:id="mytextfield" layoutX="246.0" layoutY="216.0" prefHeight="25.0" prefWidth="187.0" promptText="Enter your username here" />
+      <PasswordField fx:id="mypasswordfield" layoutX="246.0" layoutY="256.0" prefHeight="25.0" prefWidth="187.0" promptText="Enter your password here" />
+      <Label layoutX="194.0" layoutY="358.0" text="username or password does not exist!" textFill="#d02424" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
